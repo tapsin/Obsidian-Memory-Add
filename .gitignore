@@ -1,0 +1,10 @@
+node_modules/
+dist/
+work/
+*.log
+.env
+.env.*
+api-credentials.*
+settings.json
+.hafiza/
+.obsidian/
