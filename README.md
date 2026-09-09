@@ -4,7 +4,7 @@ Obsidian hafızasına web kaynaklarından düzenlenmiş, bağlantılı notlar ek
 
 ## Kaynak kodunu indir
 
-[Obsidian Memory Add ZIP paketini indir](./Obsidian-Memory-Add.zip). ZIP dosyasını açıp `Obsidian-Memory-Add` klasöründe `npm ci` ve `npm start` komutlarını çalıştırın (Node.js 24). ZIP kaynak kodunu içerir; hazır Windows/Linux uygulaması oluşturmak için aşağıdaki geliştirme komutlarını kullanın. Uygulama içindeki ad Hafıza olarak korunmuştur.
+[Obsidian Memory Add ZIP paketini indir](https://files.fm/u/j9s8apyk6sjz48k9). ZIP dosyasını açıp `Obsidian-Memory-Add` klasöründe `npm ci` ve `npm start` komutlarını çalıştırın (Node.js 24). ZIP kaynak kodunu içerir; hazır Windows/Linux uygulaması oluşturmak için aşağıdaki geliştirme komutlarını kullanın. Uygulama içindeki ad Hafıza olarak korunmuştur.
 
 Bu yayın, 1.0.9 kaynaklarına eklenen kaynak okuma zaman aşımı ve ilerleme bildirimi düzeltmelerini içerir.
 
