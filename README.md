@@ -1,18 +1,21 @@
-# Obsidian Memory Add
+# Obsidian Hafıza Geliştirme
 
-Obsidian hafızasına web kaynaklarından düzenlenmiş, bağlantılı notlar ekleyen **Hafıza** masaüstü uygulamasının açık kaynak projesi.
-
-## Kaynak kodunu indir
-
-[Obsidian Memory Add ZIP paketini indir](https://files.fm/u/j9s8apyk6sjz48k9). ZIP dosyasını açıp `Obsidian-Memory-Add` klasöründe `npm ci` ve `npm start` komutlarını çalıştırın (Node.js 24). ZIP kaynak kodunu içerir; hazır Windows/Linux uygulaması oluşturmak için aşağıdaki geliştirme komutlarını kullanın. Uygulama içindeki ad Hafıza olarak korunmuştur.
-
-Bu yayın, 1.0.9 kaynaklarına eklenen kaynak okuma zaman aşımı ve ilerleme bildirimi düzeltmelerini içerir.
+**Uygulama:** Hafıza 1.0.10  
+**Author / Geliştirici:** Sercan TAPSIN
 
 **Bir linkten, bağlantılı Obsidian notlarına.** Windows ve Linux için Türkçe masaüstü uygulaması.
 
+## İndir — 1.0.10
+
+- [Windows x64 kurulumu](https://github.com/tapsin/Obsidian-Memory-Add/releases/download/v1.0.10/Hafiza-1.0.10-Windows-x64-Kurulum.exe)
+- [Linux x86_64 AppImage](https://github.com/tapsin/Obsidian-Memory-Add/releases/download/v1.0.10/Hafiza-1.0.10-Linux-x86_64.AppImage)
+- [Sürüm notları ve SHA-256 doğrulaması](https://github.com/tapsin/Obsidian-Memory-Add/releases/tag/v1.0.10)
+
+Her iki paket PDF bağlantılarını ve Türkçe/İngilizce otomatik OCR'yi destekler. Depodaki eski `Obsidian-Memory-Add.zip` önceki kaynak sürümüdür; güncel hazır uygulama için yukarıdaki indirmeleri kullanın.
+
 ## Hızlı başlangıç
 
-1. Kaynak kodunu yukarıdaki adımlarla çalıştırın veya aşağıdaki geliştirme komutlarıyla Windows/Linux kurulum paketini oluşturun.
+1. Linux'ta `Hafiza-1.0.10-Linux-x86_64.AppImage` dosyasını çalıştırın. Gerekirse dosya özelliklerinden “Program olarak çalıştırılabilir” iznini açın. Windows'ta `Hafiza-1.0.10-Windows-x64-Kurulum.exe` dosyasıyla kurulum yapın.
 2. Sol alttan Obsidian vault klasörünüzü seçin. `.obsidian` bulunmayan bir Markdown klasörünü de kullanabilirsiniz; Obsidian'da daha sonra vault olarak açın.
 3. **Ayarlar & promptlar** bölümünde API temel adresini, model adını ve kendi API anahtarınızı girip kaydedin. Model kimliği sağlayıcınızın hesabında kullanılabilir olmalıdır.
 4. **Bilgi topla** bölümünde kaynak bağlantısını yapıştırıp **İçeriği getir** düğmesine basın. Makale alınamıyorsa **Metni kendim ekleyeceğim** yoluyla erişebildiğiniz metni yapıştırın.
@@ -62,12 +65,12 @@ Uygulama kayıt sırasında kapanırsa geçmişte **Kurtarma gerekli** görünü
 ## Bu sürümün sınırları
 
 - Windows x64 ve Linux x86_64 paketleri sağlanır. ARM paketleri yoktur.
-- Herkese açık HTML makaleleri, düz metin ve elle yapıştırılan kaynaklar desteklenir. Oturum açma, ödeme duvarı, JavaScript ile sonradan yüklenen içerik, PDF ayrıştırma ve video transkripti otomatik desteklenmez.
+- Herkese açık HTML makaleleri, düz metin, PDF bağlantıları ve elle yapıştırılan kaynaklar desteklenir. Taranmış PDF sayfaları Türkçe ve İngilizce OCR ile otomatik metne dönüştürülür. OCR motoru ve dil dosyaları her iki pakete dahildir; ayrı kurulum veya dil indirmesi gerekmez. Oturum açma, ödeme duvarı, JavaScript ile sonradan yüklenen içerik ve video transkripti otomatik desteklenmez.
 - Görseller indirilmez; varsa alternatif metinleri korunur. Önizleme uzaktaki görselleri veya sayfa komutlarını çalıştırmaz.
 - Modelin düzenlediği not kaynak metnin birebir arşivi değildir. Tam ham metin arşivlemesi bu sürümde yoktur.
 - API/model hataları, iptal ve 3 dakikalık analiz zaman aşımı kullanıcıya gösterilir. Başarısız model çıktısı vault'a yazılmaz.
 - Uygulama paketleri ticari kod imzalama sertifikasıyla imzalanmamıştır. Windows indirme/kurulum uyarısı gösterebilir.
-- Linux AppImage için dağıtıma bağlı FUSE desteği gerekebilir. FUSE yoksa `./Hafiza-1.0.9-Linux-x86_64.AppImage --appimage-extract-and-run` deneyin. Sisteminizin Chromium sandbox desteği açık olmalıdır.
+- Linux AppImage için dağıtıma bağlı FUSE desteği gerekebilir. FUSE yoksa `./Hafiza-1.0.10-Linux-x86_64.AppImage --appimage-extract-and-run` deneyin. Sisteminizin Chromium sandbox desteği açık olmalıdır.
 
 ## Geliştirme
 
@@ -90,7 +93,7 @@ Kaynak dizinler: `app/` masaüstü/API/vault işlemleri, `ui/` arayüz, `tests/`
 
 ## Doğrulama
 
-Bu yayında 41 otomatik test başarıyla geçti (çekirdek, kimlik bilgisi saklama, masaüstü ve kaynak zaman aşımı testleri). Önceki sürüm doğrulamaları: gerçek Electron penceresinde kaynak alma, yerel sahte API analizi, önizleme, bağlantılı kayıt, geri alma, prompt profili/sürümü, prompt denemesi, elle kaynak ve doğrudan kayıt akışları test edildi. Linux AppImage açılışı ayrıca denetlenmiştir. Windows EXE paketi üretildi; gerçek Windows bilgisayarda çalıştırma testi bu Linux ortamında yapılmadı. Canlı ücretli API testi, kişisel API anahtarı verilmediğinden yapılmadı.
+Bu sürümde 45 otomatik test geçti. Linux paketinin arayüzünde ve Windows paketinde Wine üzerinden Türkçe/İngilizce OCR doğrulandı. Önceki sürümlerde; gerçek Electron penceresinde kaynak alma, yerel sahte API analizi, önizleme, bağlantılı kayıt, geri alma, prompt profili/sürümü, prompt denemesi, elle kaynak ve doğrudan kayıt akışları test edildi. Linux AppImage açılışı ayrıca denetlenmiştir. Windows EXE paketi üretildi; gerçek Windows bilgisayarda çalıştırma testi bu Linux ortamında yapılmadı. Canlı ücretli API testi, kişisel API anahtarı verilmediğinden yapılmadı.
 
 ## Teknik kaynaklar
 
@@ -141,3 +144,11 @@ API anahtarı uygulama yeniden açıldığında korunur ve ayarlarda maskeli gö
 - Linux pencere simgesi görev çubuğu için 128 piksel olarak hazırlanır.
 - KDE/X11 üzerinde uygulama penceresi, xprop mevcutsa hafiza masaüstü kimliğiyle eşleştirilir.
 - Görev çubuğu kontrolü artık simgenin tüm piksel verisini ve KDE kimliğini de doğrular.
+
+## 1.0.10 — PDF ve OCR
+
+- Linux ve Windows sürümlerinde doğrudan/yönlendirmeli PDF bağlantıları okunur.
+- Metni olmayan veya yalnızca kısa başlık/sayfa numarası içeren görüntülü sayfalarda OCR otomatik devreye girer. Türkçe ve İngilizce desteklenir; doğruluk tarama kalitesine bağlıdır.
+- PDF indirme sınırı 50 MB; bağlantı ve indirme süresi 20 saniye, PDF işleme süresi en fazla 10 dakikadır. İşlem iptal edilebilir. Parola korumalı PDF için parolasız kopya gerekir.
+- Windows: `dist/Hafiza-1.0.10-Windows-x64-Kurulum.exe` dosyasını kurun; kurulumun oluşturduğu Hafıza kısayolunu açın.
+- Linux: `dist/Hafiza-1.0.10-Linux-x86_64.AppImage` dosyasını çalıştırın. Klasördeki `Hafıza Başlat.desktop` yalnızca bu bilgisayardaki Linux paketi için kısayoldur. İşletim sistemini otomatik seçen ortak bir başlatıcı değildir.
