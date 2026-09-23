@@ -150,7 +150,7 @@ API anahtarı uygulama yeniden açıldığında korunur ve ayarlarda maskeli gö
 - PDF indirme sınırı 50 MB; bağlantı ve indirme süresi 20 saniye, PDF işleme süresi en fazla 10 dakikadır. İşlem iptal edilebilir. Parola korumalı PDF için parolasız kopya gerekir.
 - Windows: `dist/Hafiza-1.0.10-Windows-x64-Kurulum.exe` dosyasını kurun; kurulumun oluşturduğu Hafıza kısayolunu açın.
 - Linux: `dist/Hafiza-1.0.10-Linux-x86_64.AppImage` dosyasını çalıştırın. Klasördeki `Hafıza Başlat.desktop` yalnızca bu bilgisayardaki Linux paketi için kısayoldur. İşletim sistemini otomatik seçen ortak bir başlatıcı değildir.
-# DONATE:
+## DONATE
 
 <table border="1">
 <tr><td>USDT TRC20</td><td><code>TYCK6ZyMS6UDt787foPH2QwFuvkdqMw1Jv</code></td></tr>
